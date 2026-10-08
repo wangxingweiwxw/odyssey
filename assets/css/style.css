@@ -1646,13 +1646,24 @@ ul, ol {
 
 @media (max-width: 768px) {
     .story-directory {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .story-directory-cover,
+    .story-tree {
+        width: 100%;
+        justify-self: stretch;
     }
 
     .story-directory-cover {
-        aspect-ratio: 3 / 4;
-        min-height: 320px;
+        aspect-ratio: auto;
+        min-height: 0;
         margin: 0;
+    }
+
+    .story-directory-cover img {
+        position: static;
+        height: auto;
     }
 }
 
