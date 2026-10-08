@@ -6,7 +6,7 @@ window.MUSEUM_PACK = {
       "name": "《奥德赛》",
       "city": "荷马史诗",
       "blurb": "英雄奥德修斯的十年归途",
-      "cover": "./assets/images/exhibits/odyssey/9bc0a3d5-2b69-4dc3-bb44-e32483a5f4c1.png",
+      "cover": "./assets/images/covers/odyssey.jpg?v=20261008cover",
       "rootId": "9bc0a3d5-2b69-4dc3-bb44-e32483a5f4c1",
       "nodes": [
         {
