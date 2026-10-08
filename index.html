@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script data-aiworks-event-tracking-bridge="1" data-aiworks-event-tracking-sha256="sha256-EoPGuFoq/s3r6h+3VAlMJ15toAPmybAFkhWE58QcZqI=" data-aiworks-event-tracking-ticket="__AIWORKS_EVENT_TRACKING_TICKET__">(()=>{try{const current=document.currentScript,ticket=current&&current.dataset.aiworksEventTrackingTicket,placeholder='__'+'AIWORKS_EVENT_TRACKING_TICKET'+'__';if(!ticket||ticket===placeholder)return;let sent=false;const send=data=>{if(sent)return false;let body;try{body=JSON.stringify({...data,deploy_uuid:ticket})}catch{return false}if(new TextEncoder().encode(body).byteLength>1048576)return false;sent=true;fetch("https://tracking.aiworks.site/api/v1/event_tracking",{method:'POST',headers:{'content-type':'application/json'},body,credentials:'omit',referrerPolicy:'no-referrer',keepalive:true}).catch(()=>{});return true};if(self===top){const pageShow=()=>send({member_id:null,member_hash_id:null,client_id:null,element_type:'Page',log_type:'Show',view_url:location.href,is_iframe_show:0,client_timestamp:Date.now(),p_platform:'desktopweb'});if(document.readyState==='complete')queueMicrotask(pageShow);else addEventListener('load',pageShow,{once:true});return}const allowed=origin=>{try{const url=new URL(origin),host=url.hostname.toLowerCase();return url.protocol==='https:'&&(host==='zhihu.com'||host.endsWith('.zhihu.com'))}catch{return false}};const receive=event=>{if(sent||event.source!==parent||!allowed(event.origin))return;const data=event.data;if(!data||Array.isArray(data)||Object.prototype.toString.call(data)!=='[object Object]')return;if(send(data))removeEventListener('message',receive)};addEventListener('message',receive)}catch{}})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="绘本数字图书馆 - 走进《奥德赛》，绘本化重走奥德修斯的十年归途">
+    <title>绘本数字图书馆</title>
+    <link rel="stylesheet" href="./assets/css/style.css?v=20260916">
+    <link rel="icon" href="./Odyssey.png">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="./index.html" class="navbar-logo">
+                <img src="./Odyssey.png" alt="绘本数字图书馆">
+                <span>绘本数字图书馆</span>
+            </a>
+            <ul class="navbar-menu">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link active">首页</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <section class="hero-simple">
+            <div class="hero-simple-inner">
+                <h1>绘本数字图书馆</h1>
+                <p>点开故事，画面上的圆点是可以走进的航线。绘本化重走奥德修斯的十年归途。</p>
+                <button type="button" class="theme-audio-toggle" aria-pressed="false" aria-label="播放 A Face A Fleet A War A Man">
+                    <svg class="theme-audio-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path fill="currentColor" d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                    </svg>
+                    <span>A Face A Fleet A War A Man...</span>
+                </button>
+            </div>
+        </section>
+
+        <section class="container" id="museums">
+            <div class="section-title">
+                <h2>奥德赛绘本</h2>
+                <p>按已走过的图层整理成目录。点标题进入对应画面，画面上的圆点仍是可以走进的航线。</p>
+                <div class="divider"></div>
+            </div>
+            <div class="story-directory">
+                <a class="story-directory-cover" href="./pages/exhibit.html?id=odyssey">
+                    <img src="./assets/images/covers/odyssey.jpg?v=20260916" alt="《奥德赛》">
+                </a>
+                <div id="story-tree" class="story-tree"></div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-bottom">
+                <p>&copy; 2026 绘本数字图书馆</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="返回顶部">&#8593;</button>
+    <script src="./assets/js/museum-data.js?v=20260916"></script>
+    <script src="./assets/js/story-tree.js?v=20260916"></script>
+    <script src="./assets/js/theme-audio-data.js?v=20260902m"></script>
+    <script src="./assets/js/theme-audio.js?v=20260902m"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
