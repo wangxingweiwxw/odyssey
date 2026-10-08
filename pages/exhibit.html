@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="奥德赛绘本 - 沿已经走过的航线继续看">
     <title>绘本 | 绘本数字图书馆</title>
-    <link rel="stylesheet" href="../assets/css/style.css?v=20260920">
+    <link rel="stylesheet" href="../assets/css/style.css?v=20261008hd">
     <link rel="icon" href="../Odyssey.png">
 </head>
 <body class="exhibit-page">
@@ -17,6 +17,7 @@
             <h1 id="exhibit-title">加载中…</h1>
         </div>
         <div class="exhibit-pager">
+            <a id="exhibit-original" class="exhibit-back" target="_blank" rel="noopener">查看原图</a>
             <button type="button" id="exhibit-mode" class="exhibit-back is-active" aria-pressed="true">动态</button>
             <button type="button" id="exhibit-back" class="exhibit-back" hidden>上一页</button>
             <button type="button" id="exhibit-next" class="exhibit-back">下一页</button>
@@ -26,6 +27,7 @@
     <main class="exhibit-stage" id="exhibit-stage">
         <div class="exhibit-frame" id="exhibit-frame">
             <img id="exhibit-image" alt="">
+            <video id="exhibit-video" muted loop playsinline preload="none" aria-hidden="true" hidden></video>
             <div id="exhibit-beacons" class="exhibit-beacons"></div>
         </div>
         <section class="exhibit-story" id="exhibit-story" hidden>
@@ -43,9 +45,9 @@
 
     <div class="exhibit-toast" id="exhibit-toast" hidden>此处尚未开放，请点击画面上的圆点</div>
 
-    <script src="../assets/js/museum-data.js?v=20260916"></script>
+    <script src="../assets/js/museum-data.js?v=20261008hd"></script>
     <script src="../assets/js/theme-audio-data.js?v=20260902m"></script>
     <script src="../assets/js/theme-audio.js?v=20260902m"></script>
-    <script src="../assets/js/exhibit-player.js?v=20260920"></script>
+    <script src="../assets/js/exhibit-player.js?v=20261008hd"></script>
 </body>
 </html>

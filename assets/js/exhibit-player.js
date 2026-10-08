@@ -46,6 +46,9 @@
     var museumEl = document.getElementById('exhibit-museum');
     var titleEl = document.getElementById('exhibit-title');
     var imgEl = document.getElementById('exhibit-image');
+    var videoEl = document.getElementById('exhibit-video');
+    var originalLink = document.getElementById('exhibit-original');
+    var mediaRevision = 0;
     var beaconsEl = document.getElementById('exhibit-beacons');
     var backBtn = document.getElementById('exhibit-back');
     var nextBtn = document.getElementById('exhibit-next');
@@ -54,11 +57,10 @@
     var hintEl = document.getElementById('exhibit-hint');
     var stageEl = document.getElementById('exhibit-stage');
     var MODE_KEY = 'odyssey-exhibit-mode';
-    var exhibitMode = 'dynamic';
+    var exhibitMode = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'static' : 'dynamic';
     try {
-        if (window.localStorage && localStorage.getItem(MODE_KEY) === 'static') {
-            exhibitMode = 'static';
-        }
+        var savedMode = localStorage.getItem(MODE_KEY);
+        if (savedMode === 'static' || savedMode === 'dynamic') exhibitMode = savedMode;
     } catch (err) {}
 
     if (!museum) {
@@ -123,9 +125,53 @@
         else modeBtn.classList.remove('is-active');
     }
 
-    function pageSrc(node) {
-        if (exhibitMode === 'dynamic' && node.motion) return node.motion;
-        return node.image;
+    function renderMedia(node) {
+        var revision = ++mediaRevision;
+        imgEl.src = node.image;
+        if (originalLink) originalLink.href = node.image;
+        if (!videoEl) return;
+
+        videoEl.onplaying = null;
+        videoEl.onerror = null;
+        videoEl.pause();
+        videoEl.classList.remove('is-playing');
+        frameEl.classList.remove('video-playing');
+        videoEl.hidden = true;
+        videoEl.removeAttribute('src');
+        videoEl.load();
+        if (exhibitMode !== 'dynamic' || !node.motion) return;
+
+        function fallback() {
+            if (revision !== mediaRevision) return;
+            videoEl.classList.remove('is-playing');
+            frameEl.classList.remove('video-playing');
+            videoEl.hidden = true;
+            videoEl.pause();
+            videoEl.onerror = null;
+            videoEl.onplaying = null;
+            videoEl.removeAttribute('src');
+            videoEl.load();
+            layoutBeacons();
+            toast('视频暂时无法播放，已显示原图');
+        }
+
+        videoEl.muted = true;
+        videoEl.hidden = false;
+        videoEl.onplaying = function () {
+            if (revision === mediaRevision) {
+                videoEl.classList.add('is-playing');
+                frameEl.classList.add('video-playing');
+                layoutBeacons();
+            }
+        };
+        videoEl.onerror = fallback;
+        videoEl.preload = 'auto';
+        videoEl.src = node.motion;
+        videoEl.load();
+        var playing = videoEl.play();
+        if (playing && playing.catch) playing.catch(function (error) {
+            if (error.name !== 'AbortError') fallback();
+        });
     }
 
     function fillStory(node) {
@@ -143,8 +189,9 @@
 
     function layoutBeacons() {
         if (!beaconsEl || !imgEl) return;
-        var nw = imgEl.naturalWidth || 0;
-        var nh = imgEl.naturalHeight || 0;
+        var isVideo = videoEl && videoEl.classList.contains('is-playing');
+        var nw = (isVideo ? videoEl.videoWidth : imgEl.naturalWidth) || 0;
+        var nh = (isVideo ? videoEl.videoHeight : imgEl.naturalHeight) || 0;
         var w = imgEl.clientWidth || 0;
         var h = imgEl.clientHeight || 0;
         if (!nw || !nh || !w || !h) {
@@ -189,7 +236,7 @@
         titleEl.textContent = node.title;
         document.title = node.title + ' | 绘本数字图书馆';
         imgEl.alt = node.title;
-        imgEl.src = pageSrc(node);
+        renderMedia(node);
         imgEl.draggable = false;
         fillStory(node);
         if (backBtn) backBtn.hidden = index <= 0;

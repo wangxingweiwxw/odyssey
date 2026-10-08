@@ -1,0 +1,511 @@
+{
+  "retrievedOn": "2026-10-08",
+  "source": "https://www.wellplay.cc",
+  "processing": "Original PNG and MP4 bytes preserved without resizing or re-encoding.",
+  "nodes": [
+    {
+      "nodeId": "9bc0a3d5-2b69-4dc3-bb44-e32483a5f4c1",
+      "title": "《奥德赛》：英雄奥德修斯的十年归途",
+      "page": "https://www.wellplay.cc/n/9bc0a3d5-2b69-4dc3-bb44-e32483a5f4c1",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/c7d90735-8239-44b5-8637-4a88f1128332.png",
+        "path": "assets/images/exhibits/odyssey/9bc0a3d5-2b69-4dc3-bb44-e32483a5f4c1.png",
+        "width": 1280,
+        "height": 720,
+        "bytes": 2158846,
+        "sha256": "21d7e55c02de5b9552d5e26e1645b6874eba6a544b1a17e314cf8dfe58b2b789"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/9bc0a3d5-2b69-4dc3-bb44-e32483a5f4c1_dynamic.mp4",
+        "path": "assets/videos/odyssey/9bc0a3d5-2b69-4dc3-bb44-e32483a5f4c1.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1367812,
+        "sha256": "708a7c35452ed88a0662287b69b45e550d07916263a06b6a5112c7b035eb6c45"
+      }
+    },
+    {
+      "nodeId": "3e8c3681-ff60-4a3f-9b1c-d37b5635d397",
+      "title": "特洛伊：奥德赛的起点",
+      "page": "https://www.wellplay.cc/n/3e8c3681-ff60-4a3f-9b1c-d37b5635d397",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/ee401a6c-9436-409f-b3b8-1ae5531df60c.png",
+        "path": "assets/images/exhibits/odyssey/3e8c3681-ff60-4a3f-9b1c-d37b5635d397.png",
+        "width": 1248,
+        "height": 832,
+        "bytes": 2888674,
+        "sha256": "b4aca49feef4aa22e8046f3bb0aee6890a88c4610ecf2d6b6f0609e185852216"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/3e8c3681-ff60-4a3f-9b1c-d37b5635d397_dynamic.mp4",
+        "path": "assets/videos/odyssey/3e8c3681-ff60-4a3f-9b1c-d37b5635d397.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1621306,
+        "sha256": "43a104f1b30ce5b4064599c5d0ae2f14bcc734d95af86e66a22b9369932298a9"
+      }
+    },
+    {
+      "nodeId": "65e257f3-9d02-460a-87bd-1ea7810ce24b",
+      "title": "智慧女神雅典娜：奥德修斯的守护者",
+      "page": "https://www.wellplay.cc/n/65e257f3-9d02-460a-87bd-1ea7810ce24b",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/d75a6816-9002-46df-af62-56781840eccc.png",
+        "path": "assets/images/exhibits/odyssey/65e257f3-9d02-460a-87bd-1ea7810ce24b.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 3706311,
+        "sha256": "0af73bc7cba175bd03bc2387690c9191522a183fc9d0dc3c6381521e2d09c5b3"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/65e257f3-9d02-460a-87bd-1ea7810ce24b_dynamic.mp4",
+        "path": "assets/videos/odyssey/65e257f3-9d02-460a-87bd-1ea7810ce24b.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1251376,
+        "sha256": "48168e3412daa6e494606dcac841b3afdb53de407a50ea0410d1c959f536bf81"
+      }
+    },
+    {
+      "nodeId": "29f4096a-9ef8-48a9-9cd5-4f621de4f886",
+      "title": "海神波塞冬：归途的阻碍者",
+      "page": "https://www.wellplay.cc/n/29f4096a-9ef8-48a9-9cd5-4f621de4f886",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/ad284f5f-3de1-4859-be3f-59b96b73c638.png",
+        "path": "assets/images/exhibits/odyssey/29f4096a-9ef8-48a9-9cd5-4f621de4f886.png",
+        "width": 1248,
+        "height": 832,
+        "bytes": 2574685,
+        "sha256": "a40514392ef50279ec0af1ae03ab9a8a18a1d27a3382c9dec2bf4757a769d2f8"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/29f4096a-9ef8-48a9-9cd5-4f621de4f886_dynamic.mp4",
+        "path": "assets/videos/odyssey/29f4096a-9ef8-48a9-9cd5-4f621de4f886.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1659017,
+        "sha256": "83e5bb57ad041b54153c6dd931be1c5fbad78c71d6961465c640c96ebe1a1a4a"
+      }
+    },
+    {
+      "nodeId": "0d751853-fde2-4020-88af-bf78b5b4102a",
+      "title": "奥德修斯的苦难之海",
+      "page": "https://www.wellplay.cc/n/0d751853-fde2-4020-88af-bf78b5b4102a",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/f84833b0-476f-4b6a-b21c-00e536a5552c.png",
+        "path": "assets/images/exhibits/odyssey/0d751853-fde2-4020-88af-bf78b5b4102a.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 4111403,
+        "sha256": "1da659d7a2bc2212085f424747025e4142e8adb2b11c56c1f7658dfa96e93914"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/0d751853-fde2-4020-88af-bf78b5b4102a_dynamic.mp4",
+        "path": "assets/videos/odyssey/0d751853-fde2-4020-88af-bf78b5b4102a.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1496365,
+        "sha256": "d7973563809d327dc8aead6b0f3a973939ce47bc88fe0471fb2a8121bd25fee8"
+      }
+    },
+    {
+      "nodeId": "e7699e99-edf7-4a9d-8f37-fc491bfd090a",
+      "title": "喀耳刻：艾尤岛的强大女巫",
+      "page": "https://www.wellplay.cc/n/e7699e99-edf7-4a9d-8f37-fc491bfd090a",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/2aecbce7-84b6-42bd-9a66-9f7501c9267e.png",
+        "path": "assets/images/exhibits/odyssey/e7699e99-edf7-4a9d-8f37-fc491bfd090a.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 4030317,
+        "sha256": "ee6862907b6428dc9199cb66fac6eac78c1c6d7e1289f06e58b45d14055ccd4b"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/e7699e99-edf7-4a9d-8f37-fc491bfd090a_dynamic.mp4",
+        "path": "assets/videos/odyssey/e7699e99-edf7-4a9d-8f37-fc491bfd090a.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1417293,
+        "sha256": "5184f6d8437fa0a9d316a23f3000edd560f805ed83379195a54b21167f13c865"
+      }
+    },
+    {
+      "nodeId": "8b5c6dc9-f830-4743-963a-bab1b5218c21",
+      "title": "《奥德赛》英雄归途全景",
+      "page": "https://www.wellplay.cc/n/8b5c6dc9-f830-4743-963a-bab1b5218c21",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/8f35ce42-cdde-4499-8bd1-6721cd7771bb.png",
+        "path": "assets/images/exhibits/odyssey/8b5c6dc9-f830-4743-963a-bab1b5218c21.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 3741360,
+        "sha256": "e8380a5fc9599a62d03c6424dc464ad98f2695335d6fc60a8c625a96fea4abe6"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/8b5c6dc9-f830-4743-963a-bab1b5218c21_dynamic.mp4",
+        "path": "assets/videos/odyssey/8b5c6dc9-f830-4743-963a-bab1b5218c21.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1242755,
+        "sha256": "a0657bec8f48607cdb4cd7d691e6d9cbe2944655fcade5052ce9b24ee8005a07"
+      }
+    },
+    {
+      "nodeId": "93e43a77-677a-4e9c-9198-7d15b6ec4a74",
+      "title": "重返伊萨卡：英雄的终点",
+      "page": "https://www.wellplay.cc/n/93e43a77-677a-4e9c-9198-7d15b6ec4a74",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/96946581-1fea-4e69-939c-401557d32b29.png",
+        "path": "assets/images/exhibits/odyssey/93e43a77-677a-4e9c-9198-7d15b6ec4a74.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 3455131,
+        "sha256": "3f87f61cc08be5d12c962f7b1fe446813d0dcbb352ef4fbc9dbaf9a45a3f8aa9"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/93e43a77-677a-4e9c-9198-7d15b6ec4a74_dynamic.mp4",
+        "path": "assets/videos/odyssey/93e43a77-677a-4e9c-9198-7d15b6ec4a74.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1264117,
+        "sha256": "8af1c55fb7783498123c98bacf6d519fe79d3746adcd8ae42208c1c68ae9e981"
+      }
+    },
+    {
+      "nodeId": "ed8cc1e1-e81f-4812-ab69-7d3c3e6b7ce2",
+      "title": "莱斯特律戈涅斯：食人巨人之灾",
+      "page": "https://www.wellplay.cc/n/ed8cc1e1-e81f-4812-ab69-7d3c3e6b7ce2",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/a2f122e9-e428-4c24-a531-4ce144fda49b.png",
+        "path": "assets/images/exhibits/odyssey/ed8cc1e1-e81f-4812-ab69-7d3c3e6b7ce2.png",
+        "width": 1536,
+        "height": 1024,
+        "bytes": 2846387,
+        "sha256": "e0097cff431efd25649b108da1a40e9bb6aec332ce2838fa809d75b1b04339da"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/ed8cc1e1-e81f-4812-ab69-7d3c3e6b7ce2_dynamic.mp4",
+        "path": "assets/videos/odyssey/ed8cc1e1-e81f-4812-ab69-7d3c3e6b7ce2.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1494121,
+        "sha256": "bbd0912eda02823949b064e3b5f13dea7b41f80b938ae2e0c33396891ab77cee"
+      }
+    },
+    {
+      "nodeId": "d6255b2f-b9d1-48f1-b9ea-7c6e52dd4721",
+      "title": "奥吉吉亚岛",
+      "page": "https://www.wellplay.cc/n/d6255b2f-b9d1-48f1-b9ea-7c6e52dd4721",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/ade7beb5-148e-4ad8-aa2d-b34de8061ba2.png",
+        "path": "assets/images/exhibits/odyssey/d6255b2f-b9d1-48f1-b9ea-7c6e52dd4721.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 3300662,
+        "sha256": "ec3a0181fd265a62b4ecc1539c9c510dd5f60dc9edf43ac05dc0d03389582a33"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/d6255b2f-b9d1-48f1-b9ea-7c6e52dd4721_dynamic.mp4",
+        "path": "assets/videos/odyssey/d6255b2f-b9d1-48f1-b9ea-7c6e52dd4721.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1926274,
+        "sha256": "a585851b9df53a067ab71d7ab3a3671345116cf7148234895cb00c08b59edca4"
+      }
+    },
+    {
+      "nodeId": "217bca3c-ca43-490d-97e0-f608a234ff20",
+      "title": "库克罗普斯海岸",
+      "page": "https://www.wellplay.cc/n/217bca3c-ca43-490d-97e0-f608a234ff20",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/b4015769-dda8-49fe-a420-83052564fb48.png",
+        "path": "assets/images/exhibits/odyssey/217bca3c-ca43-490d-97e0-f608a234ff20.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 3380045,
+        "sha256": "9d32fab8fc95914eb5bd04d1c4c5966912203418249e66cc61b5fc294e393493"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/217bca3c-ca43-490d-97e0-f608a234ff20_dynamic.mp4",
+        "path": "assets/videos/odyssey/217bca3c-ca43-490d-97e0-f608a234ff20.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1361005,
+        "sha256": "ce28879f91ef571bc8dcce78129f0280445bf3684ebba036bf9ff53c68530331"
+      }
+    },
+    {
+      "nodeId": "0665a126-8b8a-4089-9fab-197773e542ed",
+      "title": "吞噬航海者的斯库拉",
+      "page": "https://www.wellplay.cc/n/0665a126-8b8a-4089-9fab-197773e542ed",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/5ea0c0a8-7135-4d5e-84a9-5c3ed891426e.png",
+        "path": "assets/images/exhibits/odyssey/0665a126-8b8a-4089-9fab-197773e542ed.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 3452600,
+        "sha256": "98ab0ec6a32757e783b136314fa983d091abd5b599c0ba0dea9028f510fc2a6c"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/0665a126-8b8a-4089-9fab-197773e542ed_dynamic.mp4",
+        "path": "assets/videos/odyssey/0665a126-8b8a-4089-9fab-197773e542ed.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1604793,
+        "sha256": "1453617ffae3733a5c9b9070636ede674101cf2d29329d70e038757d616b1ba1"
+      }
+    },
+    {
+      "nodeId": "ae9d6cc4-4872-4c8f-9155-ca3d3050b591",
+      "title": "塞壬海域：致命诱惑之所",
+      "page": "https://www.wellplay.cc/n/ae9d6cc4-4872-4c8f-9155-ca3d3050b591",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/f60fec6e-6291-4517-9d7b-1a11adecfcaf.png",
+        "path": "assets/images/exhibits/odyssey/ae9d6cc4-4872-4c8f-9155-ca3d3050b591.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 3626075,
+        "sha256": "896e14628102099448222aede3496efbc9b4310dcc5cd59ae2fe5e397a395b54"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/ae9d6cc4-4872-4c8f-9155-ca3d3050b591_dynamic.mp4",
+        "path": "assets/videos/odyssey/ae9d6cc4-4872-4c8f-9155-ca3d3050b591.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1786263,
+        "sha256": "db2761d899775a999a587490a18833ef7d2c9cd0151dcb47334369cf26597d11"
+      }
+    },
+    {
+      "nodeId": "e6d18d7f-6db1-4a64-8cf5-8d871a3d57f0",
+      "title": "奥德修斯的木质战船",
+      "page": "https://www.wellplay.cc/n/e6d18d7f-6db1-4a64-8cf5-8d871a3d57f0",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/22458592-f534-44eb-8822-d401f7952443.png",
+        "path": "assets/images/exhibits/odyssey/e6d18d7f-6db1-4a64-8cf5-8d871a3d57f0.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2955405,
+        "sha256": "d4a2e892142898a1355c70259b580a01abc180581fae8012c83b802dafc39a34"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/e6d18d7f-6db1-4a64-8cf5-8d871a3d57f0_dynamic.mp4",
+        "path": "assets/videos/odyssey/e6d18d7f-6db1-4a64-8cf5-8d871a3d57f0.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1146737,
+        "sha256": "26edc7e598ca65f813348d6405ca340061cd2bccbb6fa6e1bc5f9899dda52bf9"
+      }
+    },
+    {
+      "nodeId": "8d1b66ef-ff87-44dc-a24a-1a8adedd8ff6",
+      "title": "雅典娜化身门托尔",
+      "page": "https://www.wellplay.cc/n/8d1b66ef-ff87-44dc-a24a-1a8adedd8ff6",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/ddb72df0-b8d4-4852-a6d6-2e8a60f8d30c.png",
+        "path": "assets/images/exhibits/odyssey/8d1b66ef-ff87-44dc-a24a-1a8adedd8ff6.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 2052947,
+        "sha256": "d322fa5465c21b1d036299090001f9d3aa110d27eacf0d8828b42af9f2aa3324"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/8d1b66ef-ff87-44dc-a24a-1a8adedd8ff6_dynamic.mp4",
+        "path": "assets/videos/odyssey/8d1b66ef-ff87-44dc-a24a-1a8adedd8ff6.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 875090,
+        "sha256": "a55851015a43b0839d6c76b455c7b7b9c3538c8bd93c2a9cb5bd2fc72d45414f"
+      }
+    },
+    {
+      "nodeId": "600f4f6b-ae01-4a8f-a320-6311c9c2e961",
+      "title": "海洋的主宰：波塞冬",
+      "page": "https://www.wellplay.cc/n/600f4f6b-ae01-4a8f-a320-6311c9c2e961",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/0f02de69-d8e7-46e1-8995-b60467083b1f.png",
+        "path": "assets/images/exhibits/odyssey/600f4f6b-ae01-4a8f-a320-6311c9c2e961.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 3546743,
+        "sha256": "c8cf7501e9dd87d4bf6b720a46ff095fcc8f55e3244b61845bd2f55acc61d171"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/600f4f6b-ae01-4a8f-a320-6311c9c2e961_dynamic.mp4",
+        "path": "assets/videos/odyssey/600f4f6b-ae01-4a8f-a320-6311c9c2e961.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1772095,
+        "sha256": "bc515a07281bf95c8963305dc7d80a37c862e91eab0722f5fa5fd466c61968da"
+      }
+    },
+    {
+      "nodeId": "de0b8117-3c68-4324-bc29-e3038ee45778",
+      "title": "冥界入口：内基亚之行",
+      "page": "https://www.wellplay.cc/n/de0b8117-3c68-4324-bc29-e3038ee45778",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/1345146b-da06-4d58-9101-19146774a7dd.png",
+        "path": "assets/images/exhibits/odyssey/de0b8117-3c68-4324-bc29-e3038ee45778.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 3465172,
+        "sha256": "588834ae077f0b771b30e7a1e168492e08153252c3b21a7174ef5b7704bc0527"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/de0b8117-3c68-4324-bc29-e3038ee45778_dynamic.mp4",
+        "path": "assets/videos/odyssey/de0b8117-3c68-4324-bc29-e3038ee45778.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1524167,
+        "sha256": "80fa01519bcac35636e5addee2fedd438563920ff27b27371c81016ec3e096b7"
+      }
+    },
+    {
+      "nodeId": "06dc1eef-46fc-4f01-9535-5c2166af8df2",
+      "title": "忠犬阿尔戈斯：二十载的守望",
+      "page": "https://www.wellplay.cc/n/06dc1eef-46fc-4f01-9535-5c2166af8df2",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/1d433793-0134-4464-a244-de5739ad1f29.png",
+        "path": "assets/images/exhibits/odyssey/06dc1eef-46fc-4f01-9535-5c2166af8df2.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 3017850,
+        "sha256": "28eb3b85db12f402b05fe90c235d808cb9b028b08d73c74445c8405149b43b48"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/06dc1eef-46fc-4f01-9535-5c2166af8df2_dynamic.mp4",
+        "path": "assets/videos/odyssey/06dc1eef-46fc-4f01-9535-5c2166af8df2.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1165631,
+        "sha256": "717e843d3cf048e10ca2e6a65983d5122595f2aec5dd2660a791e48edfcca29e"
+      }
+    },
+    {
+      "nodeId": "f674cfe9-3a9c-465f-b02b-375cedca700a",
+      "title": "奥德修斯的拉弓比赛",
+      "page": "https://www.wellplay.cc/n/f674cfe9-3a9c-465f-b02b-375cedca700a",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/c2c2d416-8b4f-4f9a-ba00-bdf4fcd030fb.png",
+        "path": "assets/images/exhibits/odyssey/f674cfe9-3a9c-465f-b02b-375cedca700a.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 3037128,
+        "sha256": "68820a8fb13778bc9fea16697a2f66e71f117a9fca0bcf4dbf26bc8fc28bfaeb"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/f674cfe9-3a9c-465f-b02b-375cedca700a_dynamic.mp4",
+        "path": "assets/videos/odyssey/f674cfe9-3a9c-465f-b02b-375cedca700a.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1764934,
+        "sha256": "ad120fe5f2749b698df87266352773c28f370e8847dda4e4abd9032c92b2347b"
+      }
+    },
+    {
+      "nodeId": "e7d327db-5055-4a77-abbd-84cac4065508",
+      "title": "卡律布狄斯：吞噬之漩",
+      "page": "https://www.wellplay.cc/n/e7d327db-5055-4a77-abbd-84cac4065508",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/820f9d4b-ba1a-4aa7-bed2-9c9c9efd68c0.png",
+        "path": "assets/images/exhibits/odyssey/e7d327db-5055-4a77-abbd-84cac4065508.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 3410187,
+        "sha256": "1dc50b0df32ba8ddbc5fdacde8c8f47496539761c8abe1cd5e185178dd45dcee"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/e7d327db-5055-4a77-abbd-84cac4065508_dynamic.mp4",
+        "path": "assets/videos/odyssey/e7d327db-5055-4a77-abbd-84cac4065508.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1421284,
+        "sha256": "8e0e209644da3ff5ffbb3bff0a45706a51eccc9f3334b93698a0e7bd428307c0"
+      }
+    },
+    {
+      "nodeId": "8e6baf60-9580-4492-85fe-67f994d84448",
+      "title": "特洛伊木马：终结战争的诡计",
+      "page": "https://www.wellplay.cc/n/8e6baf60-9580-4492-85fe-67f994d84448",
+      "image": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/c7339c95-270a-45da-b094-93f3dc8fd0fc.png",
+        "path": "assets/images/exhibits/odyssey/8e6baf60-9580-4492-85fe-67f994d84448.png",
+        "width": 1672,
+        "height": 941,
+        "bytes": 3428237,
+        "sha256": "efd1a59e7b2c0cdc516826bbf6cd99cfcbedd30f1359ad49f91f3ea4ef4679fe"
+      },
+      "video": {
+        "source": "https://img.wellplay.cc/openflipbook/session_700691b3-23cb-4233-b761-615d37fce9a3/8e6baf60-9580-4492-85fe-67f994d84448_dynamic.mp4",
+        "path": "assets/videos/odyssey/8e6baf60-9580-4492-85fe-67f994d84448.mp4",
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "1.041667",
+        "bytes": 1417258,
+        "sha256": "4d58402c7264c3b56f77aa1fd1ad845d4a3b520f835873dd04d68d555146e6ce"
+      }
+    }
+  ]
+}
