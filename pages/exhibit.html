@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="奥德赛绘本 - 沿已经走过的航线继续看">
     <title>绘本 | 绘本数字图书馆</title>
-    <link rel="stylesheet" href="../assets/css/style.css?v=20261008hd">
+    <link rel="stylesheet" href="../assets/css/style.css?v=20261008loading">
     <link rel="icon" href="../Odyssey.png">
 </head>
 <body class="exhibit-page">
@@ -25,10 +25,17 @@
     </header>
 
     <main class="exhibit-stage" id="exhibit-stage">
-        <div class="exhibit-frame" id="exhibit-frame">
+        <div class="exhibit-frame is-loading" id="exhibit-frame" aria-busy="true">
             <img id="exhibit-image" alt="">
             <video id="exhibit-video" muted loop playsinline preload="none" aria-hidden="true" hidden></video>
             <div id="exhibit-beacons" class="exhibit-beacons"></div>
+            <div id="exhibit-loading" class="exhibit-loading" role="status" aria-live="polite" aria-atomic="true">
+                <span class="exhibit-loading-spinner" aria-hidden="true"></span>
+                <strong id="exhibit-loading-title">正在打开绘本</strong>
+                <span id="exhibit-loading-detail">正在加载画面…</span>
+                <button id="exhibit-retry" class="exhibit-back" type="button" hidden>重新加载</button>
+            </div>
+            <div id="exhibit-media-note" class="exhibit-media-note" role="status" aria-live="polite" hidden></div>
         </div>
         <section class="exhibit-story" id="exhibit-story" hidden>
             <p class="exhibit-story-zh" id="exhibit-story-zh"></p>
@@ -48,6 +55,6 @@
     <script src="../assets/js/museum-data.js?v=20261008hd"></script>
     <script src="../assets/js/theme-audio-data.js?v=20260902m"></script>
     <script src="../assets/js/theme-audio.js?v=20260902m"></script>
-    <script src="../assets/js/exhibit-player.js?v=20261008hd"></script>
+    <script src="../assets/js/exhibit-player.js?v=20261008loading"></script>
 </body>
 </html>

@@ -125,50 +125,172 @@
         else modeBtn.classList.remove('is-active');
     }
 
+    var loadingEl = document.getElementById('exhibit-loading');
+    var loadingTitle = document.getElementById('exhibit-loading-title');
+    var loadingDetail = document.getElementById('exhibit-loading-detail');
+    var retryBtn = document.getElementById('exhibit-retry');
+    var mediaNote = document.getElementById('exhibit-media-note');
+    var disposeMedia = function () {};
+    var warmImages = [];
+
+    function prefetchNext(revision) {
+        if (revision !== mediaRevision) return;
+        var connection = navigator.connection;
+        if (connection && (connection.saveData || /(^|-)2g$/.test(connection.effectiveType || ''))) return;
+        var next = byId[order[index + 1]];
+        if (!next || warmImages.some(function (item) { return item.path === next.image; })) return;
+        var image = new Image();
+        image.fetchPriority = 'low';
+        image.src = next.image;
+        warmImages.push({ path: next.image, image: image });
+        if (warmImages.length > 3) warmImages.shift();
+    }
+
     function renderMedia(node) {
         var revision = ++mediaRevision;
-        imgEl.src = node.image;
-        if (originalLink) originalLink.href = node.image;
-        if (!videoEl) return;
+        disposeMedia();
+        var dynamic = exhibitMode === 'dynamic' && !!node.motion && !!videoEl;
+        var imageState = 'loading';
+        var videoState = dynamic ? 'loading' : 'off';
+        var buffering = false;
+        var slow = false;
+        var timedOut = false;
+        var shown = false;
+        var slowTimer, deadlineTimer, videoTimer, prefetchTimer;
 
-        videoEl.onplaying = null;
-        videoEl.onerror = null;
-        videoEl.pause();
-        videoEl.classList.remove('is-playing');
-        frameEl.classList.remove('video-playing');
-        videoEl.hidden = true;
-        videoEl.removeAttribute('src');
-        videoEl.load();
-        if (exhibitMode !== 'dynamic' || !node.motion) return;
-
-        function fallback() {
-            if (revision !== mediaRevision) return;
-            videoEl.classList.remove('is-playing');
-            frameEl.classList.remove('video-playing');
-            videoEl.hidden = true;
-            videoEl.pause();
-            videoEl.onerror = null;
-            videoEl.onplaying = null;
-            videoEl.removeAttribute('src');
-            videoEl.load();
-            layoutBeacons();
-            toast('视频暂时无法播放，已显示原图');
+        // Fresh elements prevent a previous page's pixels and late events from leaking into this page.
+        var image = document.createElement('img');
+        image.id = 'exhibit-image';
+        image.alt = node.title;
+        image.draggable = false;
+        image.decoding = 'async';
+        image.fetchPriority = 'high';
+        imgEl.replaceWith(image);
+        imgEl = image;
+        var video = null;
+        if (videoEl) {
+            video = document.createElement('video');
+            video.id = 'exhibit-video';
+            video.muted = true;
+            video.loop = true;
+            video.playsInline = true;
+            video.setAttribute('aria-hidden', 'true');
+            video.hidden = true;
+            video.preload = 'none';
+            videoEl.replaceWith(video);
+            videoEl = video;
         }
+        if (originalLink) originalLink.href = node.image;
+        if (loadingTitle) loadingTitle.textContent = '正在打开第 ' + (index + 1) + ' / ' + order.length + ' 页';
 
-        videoEl.muted = true;
-        videoEl.hidden = false;
-        videoEl.onplaying = function () {
-            if (revision === mediaRevision) {
-                videoEl.classList.add('is-playing');
-                frameEl.classList.add('video-playing');
-                layoutBeacons();
+        function current() { return revision === mediaRevision; }
+        function update() {
+            if (!current()) return;
+            var ready = imageState === 'ready' || videoState === 'playing';
+            var failed = !ready && (timedOut || (imageState === 'error' && videoState !== 'loading'));
+            frameEl.classList.toggle('is-loading', !ready);
+            frameEl.classList.toggle('video-playing', videoState === 'playing');
+            frameEl.setAttribute('aria-busy', !ready && !failed ? 'true' : 'false');
+            if (loadingEl) {
+                loadingEl.hidden = ready;
+                loadingEl.classList.toggle('is-error', failed);
             }
+            if (loadingDetail) loadingDetail.textContent = node.title + ' · ' +
+                (failed ? '加载未完成，请重试或继续翻页' : slow ? '网络较慢，仍在加载…' : '正在加载画面…');
+            if (retryBtn) retryBtn.hidden = ready || !(slow || failed);
+            if (mediaNote) {
+                var note = videoState === 'loading' ? '画面已就绪，动态画面加载中…' :
+                    buffering ? '动态画面缓冲中…' : videoState === 'error' ? '动态画面暂不可用，已显示原图' : '';
+                mediaNote.textContent = note;
+                mediaNote.hidden = !ready || !note;
+            }
+            if (ready) {
+                clearTimeout(slowTimer);
+                clearTimeout(deadlineTimer);
+                if (!shown) {
+                    shown = true;
+                    prefetchTimer = setTimeout(function () { prefetchNext(revision); }, 700);
+                }
+            }
+            layoutBeacons();
+        }
+        function stopVideo() {
+            if (!video) return;
+            video.onplaying = video.onerror = video.onwaiting = video.onstalled = null;
+            video.pause();
+            video.hidden = true;
+            video.classList.remove('is-playing');
+            video.removeAttribute('src');
+            video.load();
+        }
+        function fallback() {
+            if (!current()) return;
+            clearTimeout(videoTimer);
+            videoState = 'error';
+            buffering = false;
+            stopVideo();
+            update();
+        }
+        function armVideoTimeout() {
+            clearTimeout(videoTimer);
+            videoTimer = setTimeout(function () {
+                if (!current()) return;
+                // Browsers defer autoplay in background tabs; that is not a network failure.
+                if (document.hidden) armVideoTimeout();
+                else fallback();
+            }, 12000);
+        }
+        disposeMedia = function () {
+            clearTimeout(slowTimer);
+            clearTimeout(deadlineTimer);
+            clearTimeout(videoTimer);
+            clearTimeout(prefetchTimer);
+            image.onload = image.onerror = null;
+            image.removeAttribute('src');
+            stopVideo();
         };
-        videoEl.onerror = fallback;
-        videoEl.preload = 'auto';
-        videoEl.src = node.motion;
-        videoEl.load();
-        var playing = videoEl.play();
+        update();
+        slowTimer = setTimeout(function () { if (current()) { slow = true; update(); } }, 8000);
+        deadlineTimer = setTimeout(function () { if (current()) { timedOut = true; update(); } }, 30000);
+        image.onload = function () {
+            function show() {
+                if (!current()) return;
+                imageState = 'ready';
+                update();
+            }
+            if (image.decode && !document.hidden) image.decode().then(show, show);
+            else show();
+        };
+        image.onerror = function () {
+            if (!current()) return;
+            imageState = 'error';
+            update();
+        };
+        image.src = node.image;
+        if (image.complete && image.naturalWidth) image.onload();
+
+        if (!dynamic) return;
+        video.onplaying = function () {
+            if (!current()) return;
+            clearTimeout(videoTimer);
+            videoState = 'playing';
+            buffering = false;
+            video.classList.add('is-playing');
+            update();
+        };
+        video.onwaiting = video.onstalled = function () {
+            if (!current() || videoState !== 'playing') return;
+            buffering = true;
+            armVideoTimeout();
+            update();
+        };
+        video.onerror = fallback;
+        video.hidden = false;
+        video.preload = 'auto';
+        video.src = node.motion;
+        video.load();
+        armVideoTimeout();
+        var playing = video.play();
         if (playing && playing.catch) playing.catch(function (error) {
             if (error.name !== 'AbortError') fallback();
         });
@@ -234,6 +356,7 @@
         var node = byId[currentId()];
         if (!node) return;
         titleEl.textContent = node.title;
+        if (museumEl) museumEl.textContent = museum.name + ' · 第 ' + (index + 1) + ' / ' + order.length + ' 页';
         document.title = node.title + ' | 绘本数字图书馆';
         imgEl.alt = node.title;
         renderMedia(node);
@@ -330,6 +453,7 @@
                 || hasClassWalk(el, 'exhibit-pager', surface)
                 || hasClassWalk(el, 'exhibit-back', surface)
                 || hasClassWalk(el, 'exhibit-beacon', surface)
+                || hasClassWalk(el, 'exhibit-loading', surface)
                 || hasClassWalk(el, 'exhibit-story', surface)
                 || hasClassWalk(el, 'exhibit-hint', surface)
                 || hasClassWalk(el, 'theme-audio-toggle', surface);
@@ -409,6 +533,7 @@
                 return;
             }
             if (hasClassWalk(e.target, 'exhibit-beacon', surface)) return;
+            if (hasClassWalk(e.target, 'exhibit-loading', surface)) return;
             if (hasClassWalk(e.target, 'exhibit-story', surface)) return;
             if (hasClassWalk(e.target, 'exhibit-hint', surface)) return;
             if (hasClassWalk(e.target, 'theme-audio-toggle', surface)) return;
@@ -459,11 +584,13 @@
         });
     }
 
+    if (retryBtn) retryBtn.addEventListener('click', function (event) {
+        event.stopPropagation();
+        render();
+    });
+
     bindSwipe(stageEl || frameEl);
     syncModeBtn();
-    if (imgEl) {
-        imgEl.addEventListener('load', layoutBeacons);
-    }
     window.addEventListener('resize', layoutBeacons);
     render();
     syncUrl();

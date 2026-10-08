@@ -1773,6 +1773,9 @@ body.exhibit-page {
     width: min(100vw - 32px, 1100px);
     max-width: 100%;
     max-height: min(56dvh, calc(100dvh - 220px));
+    height: min(calc((100vw - 32px) * 0.5625), 619px, 56dvh, calc(100dvh - 220px));
+    background: #11151d;
+    border-radius: 8px;
     line-height: 0;
     touch-action: none;
 }
@@ -1780,7 +1783,7 @@ body.exhibit-page {
 .exhibit-frame img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     max-height: min(56dvh, calc(100dvh - 220px));
     object-fit: contain;
     border-radius: 8px;
@@ -1811,6 +1814,62 @@ body.exhibit-page {
 
 .exhibit-frame video[hidden] {
     display: none;
+}
+
+.exhibit-frame.is-loading img,
+.exhibit-frame.is-loading .exhibit-beacons {
+    visibility: hidden;
+}
+
+.exhibit-loading {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px;
+    color: #f4f1ea;
+    background: radial-gradient(ellipse at center, #252b37, #11151d 75%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    line-height: 1.5;
+    text-align: center;
+    pointer-events: none;
+}
+
+.exhibit-loading strong { font-size: 1rem; }
+#exhibit-loading-detail { font-size: 0.85rem; color: #c1c5ce; }
+.exhibit-loading button { pointer-events: auto; }
+.exhibit-loading[hidden], .exhibit-media-note[hidden] { display: none; }
+.exhibit-loading-spinner {
+    width: 28px;
+    height: 28px;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    border-top-color: #f3b65b;
+    border-radius: 50%;
+    animation: exhibit-loading-spin 0.9s linear infinite;
+}
+.exhibit-loading.is-error .exhibit-loading-spinner { display: none; }
+.exhibit-media-note {
+    position: absolute;
+    left: 12px;
+    bottom: 12px;
+    z-index: 4;
+    max-width: calc(100% - 24px);
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: rgba(10, 13, 20, 0.8);
+    color: #f4f1ea;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    pointer-events: none;
+}
+@keyframes exhibit-loading-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+    .exhibit-loading-spinner { animation: none; }
 }
 
 #exhibit-original {
