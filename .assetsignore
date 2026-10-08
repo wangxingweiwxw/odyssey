@@ -1,0 +1,6 @@
+# Publish only the static website; exclude dependencies and project tooling.
+/*
+!/index.html
+!/Odyssey.png
+!/assets/
+!/pages/
